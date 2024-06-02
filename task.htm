@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border: 1px solid white;
+            width: 250px;
+            height: 70px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            background-image: url('https://images.unsplash.com/photo-1484766280341-87861644c80d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlzaW5nJTIwc3VufGVufDB8fDB8fHww');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+        }
+        .child{
+            border: 1px solid;
+            height: 60px;
+            width: 60px;
+            border-radius: 50px;
+            background-color: white;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="main" id="main1">
+        <div class="child" onclick="slide()" id='child1'></div>
+        <div class="child" onclick="slide1()" style="display: none;" id="child2"></div>
+    </div>
+    <script>
+
+    function slide(params) {
+        let add=document.getElementById('main1')
+       document.getElementById('main1').style.justifyContent='right';
+        document.getElementById('main1').style.backgroundImage=`url(${
+            'https://c0.wallpaperflare.com/preview/188/988/39/silhouette-of-daisy-flower-behind-of-rising-sun.jpg'
+        })`  ;
+         document.getElementById('child1').style.display='none'
+         document.getElementById('child2').style.display='block'
+      
+    }
+
+    function slide1()
+    {
+        let add=document.getElementById('main1')
+       document.getElementById('main1').style.justifyContent='left';
+        document.getElementById('main1').style.backgroundImage=`url(${
+            'https://images.unsplash.com/photo-1484766280341-87861644c80d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlzaW5nJTIwc3VufGVufDB8fDB8fHww'
+        })`  ;
+         document.getElementById('child1').style.display='block'
+         document.getElementById('child2').style.display='none'
+
+    }
+    </script>
+</body>
+</html>
